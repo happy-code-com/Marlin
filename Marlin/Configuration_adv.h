@@ -569,7 +569,7 @@
 //#define FAN_KICKSTART_POWER 180  // 64-255
 
 // Some coolers may require a non-zero "off" state.
-//#define FAN_OFF_PWM  1
+#define FAN_OFF_PWM  1
 
 /**
  * PWM Fan Scaling
@@ -583,8 +583,8 @@
  *
  * Define one or both of these to override the default 0-255 range.
  */
-//#define FAN_MIN_PWM 50
-//#define FAN_MAX_PWM 128
+#define FAN_MIN_PWM 50
+#define FAN_MAX_PWM 128
 
 /**
  * Fan Fast PWM
@@ -643,8 +643,8 @@
  * Multiple extruders can be assigned to the same pin in which case
  * the fan will turn on when any selected extruder is above the threshold.
  */
-#define E0_AUTO_FAN_PIN -1
-#define E1_AUTO_FAN_PIN -1
+#define E0_AUTO_FAN_PIN HEATER_1_PIN  // need to update Configuration_adv.h @section extruder
+#define E1_AUTO_FAN_PIN -1  // need to update Configuration_adv.h @section extruder
 #define E2_AUTO_FAN_PIN -1
 #define E3_AUTO_FAN_PIN -1
 #define E4_AUTO_FAN_PIN -1
